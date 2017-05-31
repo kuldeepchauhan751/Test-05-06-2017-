@@ -1,28 +1,12 @@
 
+<h1> <b><center> Welcome To Social World</center></b></h1>
 
-<h1> Profile: </h1>
 <p>
-  <strong>Name:</strong>
-  <%= @user.first_name %>
-  <%= @user.last_name %>
-  </p>
-<p>
-	<strong>User Name:</strong>
-  <%= @user.user_name %>
-  </p>
-
-  <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  
 </p>
+<h2>
+<p>New user? <%= link_to "SIGN UP!",  new_user_path %></p>
+<p>Already have an account? <%= link_to "SIGN IN!",  new_session_path %></p>
+</h2>
 
-  <p>
-  <strong>Image:</strong>
-  <%= @user.image %>
-</p>
-
-
-
-
-
-<body style="background-color:rgb(255,222,222)"></body>  
+<body style="background-color:rgb(055,222,232)"></body> 
