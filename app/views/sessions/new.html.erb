@@ -1,18 +1,25 @@
+<body style="background-color:rgb(205,190,250)"></body>
+<% provide(:title, "LOG IN") %>
 
-<h1>SIGN IN</h1>
+<h1>LOG IN</h1>
 
-<<%= form_for @user do |f| %>
-  <p>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %>
-  </p>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
 
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </p>
+<%= form_for(:session, url: sessions_path) do |f| %>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<body style="background-color:rgb(105,150,150)"></body>
+<%= f.label :user_name %>
+<%= f.text_field :user_name, class: 'form-control' %>
+
+<%= f.label :password %>
+<%= f.password_field :password, class: 'form-control' %>
+
+<%= f.submit "Log in", class: "btn btn-primary" %>
+
+<% end %>
+
+<p>New user? <%= link_to "Sign up now!",  new_user_path %></p>
+</div>
+</div
+
+

@@ -8,11 +8,9 @@ Rails.application.routes.draw do
   #get 'sessions/create'
  #get 'sessions/destroy'
 
- root 'users#index'
- resources :users do
-  resources :sessions do
-  end
-end
+ root 'users#new'
+ resources :users 
+  resources :sessions 
 #get '/sessions/new', to: 'sessions#new'
 #post '/sessions/new', to: 'sessions#new'
 
