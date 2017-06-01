@@ -9,8 +9,11 @@ Rails.application.routes.draw do
  #get 'sessions/destroy'
 
  root 'users#show'
- resources :users 
+
+ resources :users
+ get 'login' =>'sessions#new' 
   resources :sessions 
+  get 'logout'=>'sessions#destroy'
 #get '/sessions/new', to: 'sessions#new'
 #post '/sessions/new', to: 'sessions#new'
 
