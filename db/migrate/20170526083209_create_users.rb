@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :image
       t.string :email
       t.string :password
+      t.integer :security_check
       t.timestamps null: false
     end
   end

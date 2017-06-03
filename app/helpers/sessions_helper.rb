@@ -14,6 +14,7 @@ module SessionsHelper
 
 	def log_out
 	  session.delete(:user_id)
+	  session[:user_id] = nil
 	  @current_user = nil
 	end
 	def require_user

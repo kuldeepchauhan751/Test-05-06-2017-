@@ -1,0 +1,28 @@
+
+
+<%= link_to "Logout!", logout_path %>
+<h2> Profile: <%= current_user.first_name %> <%= current_user.last_name %> </h2>
+
+<h3>Friends:</h3>
+<ul>
+	<% for friendship in @user.friendship %>
+	<li>
+		<%= friendship.friend.first_name %>
+		<%= friendship.friend.last_name %>
+		<%= link_to "Remove Friend ",  friendships_destroy_path(friendship.id) %>
+		<%= link_to "Message",  new_message_path %>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "Find Friends ", users_path %>
+
+<h2>Friended by Users</h2>
+<ul>
+  <% for user in @user.inverse_friends %>
+    <li><%=h user.user_name %></li>
+  <% end %>
+</ul>
+
+
+<body style="background-color:rgb(122,200,100)"></body>
