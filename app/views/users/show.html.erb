@@ -17,12 +17,5 @@
 
 <%= link_to "Find Friends ", users_path %>
 
-<h2>Friended by Users</h2>
-<ul>
-  <% for user in @user.inverse_friends %>
-    <li><%=h user.user_name %></li>
-  <% end %>
-</ul>
-
 
 <body style="background-color:rgb(122,200,100)"></body>

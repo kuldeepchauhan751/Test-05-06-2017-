@@ -42,13 +42,15 @@ prohibited this user from being saved:
   </p>
 
   <p>
+    <%= f.label :what_is_your_favourite_question? %>
+    <%= f.text_field :security_check, placeholder: "Enter the Question" %>
+  </p>
+
+  <p>
     <%= f.label :password %>
     <%= f.password_field :password , placeholder: "Password" %>
   </p>
-  <p>
-    <%= f.label :what_is_your_Mom_birth_year? %>
-    <%= f.text_field :security_check, placeholder: "Enter Birth Year" %>
-  </p>
+  
   <p>
     <%= f.submit "Sign Up",class: "btn btn-primary" %>
   </p>

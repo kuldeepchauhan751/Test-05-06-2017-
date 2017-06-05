@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   #get 'sessions/create'
  #get 'sessions/destroy'
-  
+  resources :reset_password
 
  root 'sessions#new'
  resources :messages
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
  get 'login' =>'sessions#new' 
   resources :sessions 
   get 'logout'=>'sessions#destroy'
-  resources :reset_password
+  
 #get '/sessions/new', to: 'sessions#new'
 #post '/sessions/new', to: 'sessions#new'
 

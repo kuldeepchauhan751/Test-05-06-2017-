@@ -1,6 +1,17 @@
 <h2>Reset Password</h2>
-<%= form_tag (reset_password_edit_path), method: :PUT do %>
+
+<%= form_tag reset_password_path, method: :PUT do %>
+<p>
+
  <%= label_tag :password,"Enter new password" %><br/>
+
  <%= password_field_tag :password %><br/>
+
+</p>
+
  <%= submit_tag "Submit" %>
+
  <% end %>
+
+
+ <body style="background-color:rgb(172,109,190)"></body>

@@ -1,19 +1,22 @@
 class ResetPasswordController < ApplicationController
   def new
+    @user=User.new
   end
 
   def create
+    
   	@user = User.find_by(email: params[:email],security_check: params[:security_check])
+    
   	if @user
-  		redirect_to reset_password_edit_path(@user)
+  		redirect_to edit_reset_password_path(@user)
   	else
-  		flash[:danger]=" Invalid email or security_check "
+  		flash[:danger]=" Invalid email or Security Check "
   		render 'new'
   	end
   end
 
   def edit
-  	@user=User.find_by(:email_params[:email],security_check: params[:security_check])
+  	@user=User.find_by(email: params[:email],security_check: params[:security_check])
   end
 
   def update

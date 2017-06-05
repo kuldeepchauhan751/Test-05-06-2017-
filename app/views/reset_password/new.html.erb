@@ -1,10 +1,20 @@
- 
- <%= form_tag @user, url: edit_reset_password_path do %>
+
+ <%= form_tag reset_password_index_path,method: :post do %>
+ <p>
+
  <%= label_tag :email,"Registered Email:" %><br/>
+
  <%= text_field_tag :email,nil, autocomplete: :off %><br/>
- <%= label_tag :security_check, "What is your Mom's birth year" %><br/>
+</p>
+
+<p>
+ <%= label_tag :security_check, "what is your favourite question?" %><br/>
+
  <%= text_field_tag :security_check,nil, autocomplete: :off %><br/>
+</p>
+
  <%= submit_tag "Submit" %>
+
  <% end %>
 
- <body style="background-color:rgb(101,200,150)"></body>
+ <body style="background-color:rgb(151,150,150)"></body>
